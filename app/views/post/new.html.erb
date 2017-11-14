@@ -1,7 +1,8 @@
 <div class="container">
     <div class="form-group row">
-        <div class="col-3"> </div>
-        <div class="col-6">
+        <div class="col"></div>
+        
+        <div class="col-lg-6 col-md-8 col-sm-12">
             <h1>글 쓰기</h1>
             
             <form action="/post/create">
@@ -13,11 +14,13 @@
                     <input type="text" name="content" class="form-control" placeholder="내용">
                 </div>
                 
+                <input type="hidden" name="user_id" value="<%= session[:user_id] %>">
                 <div class="text-right">
                     <button type="submit" class="btn btn-outline-primary"> 작성 </button>
                 </div>
             </form>
         </div>
-        <div class="col-3"> </div>
+        
+        <div class="col"></div>
     </div>
 </div>

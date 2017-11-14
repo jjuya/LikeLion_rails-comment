@@ -105,7 +105,7 @@ AI 빅데이터 분석가 양성 과정
         * login/logout
 ---
 
-## Week 2: ???
+## Week 2: 
 - day 1 : Model association
     1. [Simple Board](https://github.com/jjuya/LikeLion_rails-simple_board)
         1) Model, View and Controller
@@ -175,3 +175,30 @@ AI 빅데이터 분석가 양성 과정
                 end
                 ```
     2. [Comment practice](https://github.com/jjuya/LikeLion_rails-comment)
+    
+- day 1 : Model association
+    1. [Comment practice](https://github.com/jjuya/LikeLion_rails-comment)
+        1) User controller 추가
+            * form tag
+            * labeltag
+        2)  Bootstrap
+            * grid : https://getbootstrap.com/docs/4.0/layout/grid/
+            * alert
+                - flash[:notice] : arlet 초록색 경고창
+                - flash[:alert] : arlet 붉은색 경고창
+            * navbar
+                - render : http://guides.rubyonrails.org/layouts_and_rendering.html
+                ```ruby
+                render 'layouts/navbar'
+                ```
+            * table
+        3) seeds.rb
+            ```linux
+            rake db:drop
+            rake db:migriate
+            rake db:seed
+            ```
+            - gem 'faker' : https://github.com/stympy/faker
+        4) pagenation
+            - kaminari : https://github.com/kaminari/kaminari
+            - will\_paginate : https://github.com/mislav/will_paginate

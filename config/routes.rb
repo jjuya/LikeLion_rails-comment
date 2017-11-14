@@ -1,4 +1,20 @@
 Rails.application.routes.draw do
+  get 'user/index'
+
+  get 'user/new'
+
+  post 'user/create'
+
+  get 'user/show/:id' => 'user#show'
+
+  get 'user/login'
+
+  post 'user/login_process'
+
+  get 'user/logout'
+  
+  get 'user/note'
+
   root 'post#index'
 
   get 'post/new'

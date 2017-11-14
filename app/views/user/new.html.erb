@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="form-group row">
+        <div class="col-3"> </div>
+        <div class="col-6">
+            <h1>회원가입</h1>
+            <p>회원가입을 절차에 따라 진행해주세요</p>
+            
+            <%=form_tag("/user/create", method: "post") do%>
+              <%=label_tag(:email)%>
+              <%=text_field_tag(:email)%><br/>
+              <%=label_tag(:password)%>
+              <%=text_field_tag(:password)%><br/>
+              <%=submit_tag("회원가입")%>
+            <% end %>
+        </div>
+        <div class="col-3"> </div>
+    </div>
+</div>
