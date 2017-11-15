@@ -202,3 +202,54 @@ AI 빅데이터 분석가 양성 과정
         4) pagenation
             - kaminari : https://github.com/kaminari/kaminari
             - will\_paginate : https://github.com/mislav/will_paginate
+- day 2 : 
+    1. [Comment practice](https://github.com/jjuya/LikeLion_rails-comment)
+        1) form tag
+        2) Post, User
+        3) Scaffold
+- day 3 : 
+    1. [Comment practice](https://github.com/jjuya/LikeLion_rails-comment)
+        1) Post
+            * post#edit/:id
+            * post#update/:id
+            * post#destory/:id
+        2) refactoring
+            * before_action : http://guides.rorlab.org/action_controller_overview.html
+            ```ruby
+            before_action(:find_post, only: [:show, :edit, :update, :destroy])
+            ```
+            * RESTful API : http://meetup.toast.com/posts/92
+                - 자원(RESOURCE) - URI
+                - 행위(Verb) - HTTP METHOD
+                - 표현(Representations)
+                - ** 4. REST API 디자인 가이드 **
+            * CoC
+                - Routing은 RESTful 하게
+                - Resource(조작할 자료)는 복수형 :controller 이름은 복수형
+                ```
+                rails g controller posts
+                ```
+                - 단, Model은 단수형
+                ```
+                rails g model post 테이블은 자동으로 복수형
+                ```
+        3) Tweet : controller tweets using RESTful
+            ```
+            rails g controller tweets index new create show edit update destroy
+            ````
+            * RESTful API : http://meetup.toast.com/posts/92
+                - 자원(RESOURCE) - URI
+                - 행위(Verb) - HTTP METHOD
+                - 표현(Representations)
+                - ** 4. REST API 디자인 가이드 **
+            * CoC
+                - Routing은 RESTful 하게
+                - Resource(조작할 자료)는 복수형 :controller 이름은 복수형
+                ```
+                rails g controller tweets
+                ```
+                - 단, Model은 단수형
+                ```
+                rails g model tweet
+                ```
+            * http://guides.rorlab.org/routing.html

@@ -19,6 +19,7 @@
                     <th>제목</th>
                     <th>작성자</th>
                     <th>작성일</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -26,8 +27,12 @@
                     <tr>
                       <th scope="row"><%= p.id %></th>
                       <td><a href="/post/show/<%= p.id%>"><%= p.title %></a></td>
-                      <td><%= p.user.email %></td>
+                      <td><%= p.user.email if p.user %></td>
                       <td><%= time_ago_in_words(p.created_at) %></td>
+                      <td>
+                        <a href="/post/edit/<%= p.id %>" class="btn btn-outline-primary btn-sm"> 수정 </a>
+                        <a href="/post/destroy/<%= p.id %>" class="btn btn-outline-danger btn-sm"> 삭제 </a>
+                      </td>
                     </tr>
                 <% end %>
             </tbody>

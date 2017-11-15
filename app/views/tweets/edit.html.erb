@@ -1,0 +1,35 @@
+<!--<div class="container">-->
+    
+<!--    <div class="col"></div>-->
+<!--    <div class="col">-->
+<!--        <h1>트윗 수정</h1>-->
+<!--        <div class="form-group">-->
+<!--            <form action="/tweets/<%= @tweet.id %>" method="get">-->
+<!--                <div class="form-group">-->
+<!--                    <input type="text" name="content" class="form-control" value="<%= @tweet.content %>">-->
+                    <!--<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">-->
+<!--                </div>-->
+<!--                <div class="text-right">-->
+<!--                    <input type="submit" class="btn btn-outline-primary" value="작성">-->
+<!--                </div>-->
+<!--            </form>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="col"></div>-->
+<!--</div>-->
+
+<div class="container">
+    <div class="col"></div>
+    
+    <div class="col">
+        <h1>트윗 수정</h1>
+        <div class="form-group">
+            <%= form_tag("/tweets/#{@tweet.id}", method: "put") do %>
+              <%= text_field_tag(:content, "#{@tweet.content}") %>
+              <%= submit_tag("수정")%>
+            <% end %>
+        </div>
+    </div>
+    
+    <div class="col"></div>
+</div>

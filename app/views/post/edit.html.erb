@@ -3,19 +3,18 @@
         <div class="col"></div>
         
         <div class="col-lg-6 col-md-8 col-sm-12">
-            <h1>글 쓰기</h1>
+            <h1>글 수정</h1>
             
-            <form action="/post/create">
+            <form action="/post/update/<%= @post.id %>">
                 <div class="form-group">
-                    <input type="text" name="title" class="form-control" placeholder="제목">
+                    <input type="text" name="title" class="form-control" value="<%= @post.title %>">
                 </div>
                 
                 <div class="form-group">
-                    <input type="text" name="content" class="form-control" placeholder="내용">
+                    <input type="text" name="content" class="form-control" value="<%= @post.content %>">
                 </div>
                 
                 <input type="hidden" name="user_id" value="<%= session[:user_id] %>">
-                
                 <div class="text-right">
                     <button type="submit" class="btn btn-outline-primary"> 작성 </button>
                 </div>
